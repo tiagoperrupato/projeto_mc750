@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Web Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interface Web para Arduino 🚀</h1>
+        <button id="connectButton">🔌 Conectar ao Arduino</button>
+        <p id="status">Status: Desconectado</p>
+    </header>
+
+    <main id="content">
+        <div class="screen" id="initialScreen">
+            <h2>Pressione um botão no Arduino</h2>
+            <p>Conecte-se ao dispositivo e aperte um dos 6 botões para mudar o conteúdo desta tela.</p>
+        </div>
+
+        <div class="screen hidden" id="screenButton1">
+            <h2>Tela 1 Ativada</h2>
+            <p>Você pressionou o <strong>Botão 1</strong>.</p>
+        </div>
+        <div class="screen hidden" id="screenButton2">
+            <h2>Tela 2 Ativada</h2>
+            <p>Você pressionou o <strong>Botão 2</strong>.</p>
+        </div>
+        <div class="screen hidden" id="screenButton3">
+            <h2>Tela 3 Ativada</h2>
+            <p>Você pressionou o <strong>Botão 3</strong>.</p>
+        </div>
+        <div class="screen hidden" id="screenButton4">
+            <h2>Tela 4 Ativada</h2>
+            <p>Você pressionou o <strong>Botão 4</strong>.</p>
+        </div>
+        <div class="screen hidden" id="screenButton5">
+            <h2>Tela 5 Ativada</h2>
+            <p>Você pressionou o <strong>Botão 5</strong>.</p>
+        </div>
+        <div class="screen hidden" id="screenButton6">
+            <h2>Tela 6 Ativada</h2>
+            <p>Você pressionou o <strong>Botão 6</strong>.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
