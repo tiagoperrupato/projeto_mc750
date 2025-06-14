@@ -105,17 +105,25 @@ document.addEventListener('DOMContentLoaded', async () => {
         const buttonNumberMatch = buttonId.match(/\d+/);
         const buttonNumber = buttonNumberMatch ? buttonNumberMatch[0] : null;
 
+        const header = document.getElementById('headerSection');
+
         if (buttonNumber) {
             const screenToShow = document.getElementById(`screenButton${buttonNumber}`);
             if (screenToShow) {
                 screenToShow.classList.remove('hidden');
             }
             document.getElementById('testSection').classList.add('hidden');
+            
+            if(header) header.classList.add('hidden');
+            document.getElementById('headerSection').classList.add('hidden');
         } else {
             // Mostra a tela inicial e a seção de teste
             const initial = document.getElementById('initialScreen');
             if (initial) initial.classList.remove('hidden');
             document.getElementById('testSection').classList.remove('hidden');
+            
+            if(header) header.classList.remove('hidden');
+            document.getElementById('headerSection').classList.remove('hidden');
         }
     }
 
