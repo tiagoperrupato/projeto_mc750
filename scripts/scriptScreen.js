@@ -39,6 +39,8 @@ function inicializarNavegacaoCards(containerSelector = '.cards-container') {
     speechSynthesis.cancel();
     speechSynthesis.speak(utterance);
   };
+
+  
 }
 
 // Disponibiliza globalmente

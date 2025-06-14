@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #d9d9d9;
+  background-color: #f8f8f8; /*background total */
 }
 
 section {
@@ -35,6 +35,8 @@ header h1 {
   font-size: 3rem;
   text-align: center;
   margin-top: 1rem;
+  font-style: italic;
+  color: #1a2237;
 }
 
 /* Introdução */
@@ -49,7 +51,7 @@ header h1 {
   text-align: center;
   font-weight: lighter;
   font-style: italic;
-  color: #555;
+  color: #1a2237;
 }
 
 

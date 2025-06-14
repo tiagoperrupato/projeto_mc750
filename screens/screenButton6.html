@@ -1,2 +1,78 @@
-<h2>Tela 6 Ativada</h2>
-<p>Você pressionou o <strong>Botão 6</strong>.</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industrial Activities</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- Ícones Font Awesome CDN (para os ícones nos cards) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+</head>
+<body>
+    <header>
+      <h1>Industrial Activities</h1>
+    </header>
+    <div class="intro" aria-label="Descrição da página">
+      <p>
+        Por trás de cada produto, há um gasto invisível de energia. Como equilibrar progresso e sustentabilidade?
+      </p>
+    </div>
+  
+    <section>
+    
+      <div class="cards-container">
+      
+        <!-- CARD 1 -->
+        <div class="card active">
+        <div class="media-icons"><i class="fas fa-home"></i></div>
+        <div class="Activity">
+          <h2>
+          <span style="font-size: 2.5em; line-height: 1;">🏭</span><br>
+          Fábrica<br>(Médio porte)
+          </h2>
+        </div>
+        <div class="card-infos">
+          <div class="Consumption"><p><strong>⚡ Consumo:</strong> 1 a 10 MWh por dia</p></div>
+          <div class="Equivalency"><p><strong>📊 Equivalência:</strong> 3.3 mil a 33 milhões de consultas ou 3.4 mil a 100 mil imagens geradas com IA.</p></div>
+          <div class="description">
+          <p>💡 A implantação massiva de IA em médio porte industrial requer energia equivalente a milhões de interações ou dezenas de milhares de imagens por dia. Energia essa que poderia operar a fábrica com o mesmo consumo.
+</p>
+          </div>
+        </div>
+        <button onclick="lerTexto(this)">🔈 Ouvir</button>
+        </div>
+      
+        <!-- CARD 2 -->
+        <div class="card">
+        <div class="media-icons"><i class="fas fa-home"></i></div>
+        <div class="Activity">
+          <h2>
+          <span style="font-size: 2.5em; line-height: 1;">🤖</span><br>
+          Linha de produção
+          </h2>
+        </div>
+        <div class="card-infos">
+          <div class="Consumption"><p><strong>⚡ Consumo:</strong> 5000 kWh por dia</p></div>
+          <div class="Equivalency"><p><strong>📊 Equivalência:</strong> 17 milhões de consultas ou 17 mil a 500 mil imagens geradas com IA.</p></div>
+          <div class="description">
+          <p>💡 O uso da energia para automatizar processos produtivos em indústrias médias corresponde a milhões de interações com IA, reforçando a necessidade de buscar eficiência energética em ambas as áreas. </p>
+          </div>
+        </div>
+        <button onclick="lerTexto(this)">🔈 Ouvir</button>
+        </div>
+      </div>
+          <!-- Botões de navegação -->
+      <div class="navigation-buttons" aria-label="Navegação entre cards">
+        <button id="prevBtn" aria-label="Card anterior">< Anterior</button>
+        <button id="nextBtn" aria-label="Próximo card">Próximo ></button>
+      </div>
+    </section>
+
+</body>
+</html>
+      
