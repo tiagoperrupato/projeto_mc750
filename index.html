@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino Web Interface</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
     <header>
@@ -17,34 +17,29 @@
         <div class="screen" id="initialScreen">
             <h2>Pressione um botão no Arduino</h2>
             <p>Conecte-se ao dispositivo e aperte um dos 6 botões para mudar o conteúdo desta tela.</p>
+        
+        <section id="testSection">
+            <h3>Simulação Local (sem Arduino)</h3>
+            <p>Clique para simular um botão do Arduino:</p>
+            <button onclick="simulateButton('Button1')">Botão 1</button>
+            <button onclick="simulateButton('Button2')">Botão 2</button>
+            <button onclick="simulateButton('Button3')">Botão 3</button>
+            <button onclick="simulateButton('Button4')">Botão 4</button>
+            <button onclick="simulateButton('Button5')">Botão 5</button>
+            <button onclick="simulateButton('Button6')">Botão 6</button>
+        </section>
         </div>
 
-        <div class="screen hidden" id="screenButton1">
-            <h2>Tela 1 Ativada</h2>
-            <p>Você pressionou o <strong>Botão 1</strong>.</p>
-        </div>
-        <div class="screen hidden" id="screenButton2">
-            <h2>Tela 2 Ativada</h2>
-            <p>Você pressionou o <strong>Botão 2</strong>.</p>
-        </div>
-        <div class="screen hidden" id="screenButton3">
-            <h2>Tela 3 Ativada</h2>
-            <p>Você pressionou o <strong>Botão 3</strong>.</p>
-        </div>
-        <div class="screen hidden" id="screenButton4">
-            <h2>Tela 4 Ativada</h2>
-            <p>Você pressionou o <strong>Botão 4</strong>.</p>
-        </div>
-        <div class="screen hidden" id="screenButton5">
-            <h2>Tela 5 Ativada</h2>
-            <p>Você pressionou o <strong>Botão 5</strong>.</p>
-        </div>
-        <div class="screen hidden" id="screenButton6">
-            <h2>Tela 6 Ativada</h2>
-            <p>Você pressionou o <strong>Botão 6</strong>.</p>
-        </div>
+        <!-- Conteúdos de cada botão -->
+        <div class="screen hidden" id="screenButton1"></div>
+        <div class="screen hidden" id="screenButton2"></div>
+        <div class="screen hidden" id="screenButton3"></div>
+        <div class="screen hidden" id="screenButton4"></div>
+        <div class="screen hidden" id="screenButton5"></div>
+        <div class="screen hidden" id="screenButton6"></div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/scriptScreen.js"></script>
 </body>
 </html>

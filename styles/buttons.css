@@ -1,0 +1,182 @@
+/* === Google Font Import - Poppins === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #d9d9d9;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Introdução */
+.intro {
+  max-width: 700px;
+  padding: 0.2rem 0.2rem;
+  font-size: 1.7rem;
+  margin: 12px auto;
+  display:inline;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: lighter;
+  font-style: italic;
+  color: #555;
+}
+
+
+
+.card {
+  background: #f8f8f8;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 450px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* todos escondidos por padrão */
+  flex-direction: column;
+  transition: background 0.3s ease;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+}
+.card.active {
+  display: flex; /* Apenas o card ativo fica visível */
+}
+
+.card .media-icons {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  text-align: justify !important;
+}
+
+.card .Activity {
+  text-align: center;
+}
+
+
+.card-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Espaço entre os itens */
+  justify-content:left; /* Centraliza na horizontal */
+  align-items: flex-start; /* Alinha pelo topo */
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.Consumption,
+.Equivalency,
+.description {
+  flex: 1 1 0;
+}
+
+.description {
+  width: 100%;
+  display: block;
+}
+
+.card button {
+  background: #f8f8f8;
+  color: #007bff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 25%;
+  font-weight: bold;
+  font-size: 1.0rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  align-self: flex-end;
+  margin-top: auto; /* fixa o botão no rodapé do card */
+}
+
+.card button:hover {
+  background: #0056b3;
+  color:#f8f8f8;
+}
+
+/* Navegação  */
+.navigation-buttons {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 350px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navigation-buttons button {
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+  padding: 0.6rem 1.5rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 900;
+  transition: background-color 0.3s ease;
+  margin-right: 1rem; 
+}
+
+
+.navigation-buttons button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .card-infos {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .cards-container {
+    padding: 0.5rem;
+  }
+  .card {
+    padding: 1rem;
+  }
+}

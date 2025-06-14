@@ -37,19 +37,46 @@ header {
 }
 
 main {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;       
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-sizing: border-box;
 }
 
+#content, main {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#testSection {
+  display: flex;
+  flex-direction: row;
+  gap: 12px; 
+  justify-content: center;
+  align-items: center;
+}
 .screen {
-    animation: fadeIn 0.5s;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: none; /* Esconde por padrão */
+}
+.screen:not(.hidden) {
+  display: block; /* Mostra a tela ativa */
 }
 
 .hidden {
-    display: none;
+  display: none !important;
 }
 
 @keyframes fadeIn {

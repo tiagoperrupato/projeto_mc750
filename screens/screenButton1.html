@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domestic Activities</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- Ícones Font Awesome CDN (para os ícones nos cards) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+</head>
+<body>
+  <header>
+    <h1>Domestic Activities</h1>
+  </header>
+
+  <div class="intro" aria-label="Descrição da página">
+    <p>
+      O seu banho, seu café e sua luz têm propósito. Já cada clique na IA tem um custo que você não vê.<br />
+      Escolha com consciência. Energia é vida.
+    </p>
+  </div>
+
+  <section>
+    <div class="cards-container">
+
+      <!-- CARD 1 -->
+      <div class="card active">
+      <div class="media-icons"><i class="fas fa-home"></i></div>
+      <div class="Activity">
+        <h2>
+        <span style="font-size: 2.5em; line-height: 1;">📱</span><br>
+        Carregar um celular<br>(carga total)
+        </h2>
+      </div>
+      <div class="card-infos">
+        <div class="Consumption"><p><strong>⚡ Consumo:</strong> ~0,015 kWh</p></div>
+        <div class="Equivalency"><p><strong>📊 Equivalência:</strong> 1 a 15 consultas ao ChatGPT</p></div>
+        <div class="description">
+        <p>💡 Carregar seu celular por um dia inteiro consome menos energia do que alguns minutos de uso de inteligência artificial.</p>
+        </div>
+      </div>
+      <button onclick="lerTexto(this)">🔈 Ouvir</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+      <div class="media-icons"><i class="fas fa-home"></i></div>
+      <div class="Activity">
+        <h2>
+        <span style="font-size: 2.5em; line-height: 1;">💻</span><br>
+        Usar um notebook<br>(1 hora)
+        </h2>
+      </div>
+      <div class="card-infos">
+        <div class="Consumption"><p><strong>⚡ Consumo:</strong> 0,05 a 0,1 kWh</p></div>
+        <div class="Equivalency"><p><strong>📊 Equivalência:</strong> 5 a 100 interações com o ChatGPT</p></div>
+        <div class="description">
+        <p>💡 Trabalhar, estudar ou criar no seu notebook pode ser muito mais eficiente do que algumas dezenas de comandos para uma IA.</p>
+        </div>
+      </div>
+      <button onclick="lerTexto(this)">🔈 Ouvir</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+      <div class="media-icons"><i class="fas fa-home"></i></div>
+      <div class="Activity">
+        <h2>
+        <span style="font-size: 2.5em; line-height: 1;">❄️</span><br>
+        Ar-condicionado<br>(1 hora)
+        </h2>
+      </div>
+      <div class="card-infos">
+        <div class="Consumption"><p><strong>⚡ Consumo:</strong> ~0,684 kWh</p></div>
+        <div class="Equivalency"><p><strong>📊 Equivalência:</strong> 68 a 684 interações com o ChatGPT</p></div>
+        <div class="description">
+        <p>💡 O ar-condicionado atende a uma necessidade física diante do aumento extremo das temperaturas, já o uso crescente de IA levanta um alerta: será que gastamos energia com o que realmente importa?</p>
+        </div>
+      </div>
+      <button onclick="lerTexto(this)">🔈 Ouvir</button>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card">
+      <div class="media-icons"><i class="fas fa-home"></i></div>
+      <div class="Activity">
+        <h2>
+        <span style="font-size: 2.5em; line-height: 1;">🚿</span><br>
+        Banho quente<br>(10 min)
+        </h2>
+      </div>
+      <div class="card-infos">
+        <div class="Consumption"><p><strong>⚡ Consumo:</strong> ~0,9 kWh</p></div>
+        <div class="Equivalency"><p><strong>📊 Equivalência:</strong> 90 a 900 consultas ao ChatGPT</p></div>
+        <div class="description">
+        <p>💡 Tomar um banho quente é uma necessidade. Já fazer dezenas de perguntas a uma IA pode gastar a mesma energia, muitas vezes sem um propósito claro.</p>
+        </div>
+      </div>
+      <button onclick="lerTexto(this)">🔈 Ouvir</button>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="card">
+      <div class="media-icons"><i class="fas fa-home"></i></div>
+      <div class="Activity">
+        <h2>
+        <span style="font-size: 2.5em; line-height: 1;">🏠</span><br>
+        Consumo médio diário de uma casa
+        </h2>
+      </div>
+      <div class="card-infos">
+        <div class="Consumption"><p><strong>⚡ Consumo:</strong> 5 a 10 kWh</p></div>
+        <div class="Equivalency"><p><strong>📊 Equivalência:</strong> 500 a 10.000 consultas ao ChatGPT</p></div>
+        <div class="description">
+        <p>💡 Toda a energia que mantém uma casa funcionando por horas pode ser rapidamente consumida por milhares de prompts de IA.</p>
+        </div>
+      </div>
+      <button onclick="lerTexto(this)">🔈 Ouvir</button>
+      </div>
+
+    </div>
+    <!-- Botões de navegação -->
+    <div class="navigation-buttons" aria-label="Navegação entre cards">
+      <button id="prevBtn" aria-label="Card anterior">< Anterior</button>
+      <button id="nextBtn" aria-label="Próximo card">Próximo ></button>
+    </div>
+
+  </section>
+
+
+
+</body>
+</html>
