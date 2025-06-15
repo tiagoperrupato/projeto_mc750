@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function loadScreens() {
         const promises = [];
 
-        for (let i = 1; i <= 6; i++) {
+        for (let i = 1; i <= 7; i++) {
             const screenDiv = document.getElementById(`screenButton${i}`);
             
             if (screenDiv) {
@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if(header) header.classList.remove('hidden');
     }
 }
+window.updateScreen = updateScreen;
 
 
     // Leitura de texto

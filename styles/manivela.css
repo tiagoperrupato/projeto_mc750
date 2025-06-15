@@ -1,0 +1,120 @@
+/* === Google Font Import - Poppins === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f8f8f8; /*background total */
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 16px 0 16px 0;
+  margin: 0;
+}
+
+.home-link {
+  position: absolute;
+  left: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1a2237;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.home-link:hover {
+  color:#007bff;
+}
+
+
+header h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem;
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  color: #1a2237;
+}
+
+/* Introdução */
+.intro {
+  max-width: 400px;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.4rem;
+  margin: 8px auto;
+  display:inline;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: lighter;
+  font-style: italic;
+  color: #1a2237;
+}
+.geracao-energia-container {
+    width: 1000px;
+    height: 600px;
+    margin: 32px auto;
+    background: #f8f8f8;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 32px 28px 28px 28px;
+    text-align: center;
+}
+
+.geracao-energia-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #a87c0d;
+}
+
+.geracao-energia-container p {
+  font-size: 1.08rem;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+#statusManivela {
+  margin-top: 18px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #00695c;
+  min-height: 48px;
+}
+
+#tempoManivela {
+  font-size: 1.08rem;
+  color: #374151;
+  margin-top: 6px;
+  min-height: 24px;
+}
+
+@media (max-width: 600px) {
+  .geracao-energia-container, .intro {
+    padding: 14px 8px;
+    margin: 16px 4px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+    .home-link {
+      right: 12px;
+      font-size: 1rem;
+    }
+  }

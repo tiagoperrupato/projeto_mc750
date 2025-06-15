@@ -17,7 +17,7 @@
         <img src="assets/logo-ic-unicamp-slant-line-wht-sky-ora-0480.png" alt="Logo do Instituto de Computação" class="logo" />
       </div>
       <h1> Maquete Interativa: O Peso Energético da IA </h1>
-      <h2>Grupo 13 - Ods Developers 🚀</h2>
+      <h2>Grupo 13 - ODS Developers 🚀</h2>
       <button id="connectButton">🔌 Conectar ao Arduino</button>
       <p id="status">Status: Desconectado</p>
     </section>
@@ -38,7 +38,7 @@
         </div>
       </div>
 
-    <div class ="project-description">
+    <div class="project-description">
       <p>
         O projeto de maquete interativa, desenvolvido para a disciplina de MC750, utiliza uma interface Web integrada ao Arduino UNO para promover
         reflexões sobre o consumo de energia em diferentes contextos: doméstico, industrial, agrícola, hospitalar e computacional - com foco na comparação com o consumo de energia de atividades de IA.
@@ -47,7 +47,10 @@
       <p><strong><span style="font-size:2em;">🎯</span>
         Pressione um botão físico conectado ao Arduino, acesse conteúdos interativos, com comparações entre o consumo de IA e
         atividades do cotidiano.</strong></p>
-      <button class="ouvir-btn" onclick="lerDescription(this)">🔈 Ouvir</button>
+      <div class="button-container">
+        <button class="manivela" onclick="updateScreen('Button7')">🔋 Gerar energia</button>
+        <button class="ouvir-btn" onclick="lerDescription(this)">🔈 Ouvir</button>
+      </div>
     </div>
 
 
@@ -71,10 +74,12 @@
     <div class="screen hidden" id="screenButton4"></div>
     <div class="screen hidden" id="screenButton5"></div>
     <div class="screen hidden" id="screenButton6"></div>
+    <div class="screen hidden" id="screenButton7"></div>
   </main>
 
   <!-- Scripts -->
   <script src="./scripts/script.js"></script>
   <script src="./scripts/scriptScreen.js"></script>
+  <script src="./scripts/scriptManivela.js"></script></script>
 </body>
 </html>

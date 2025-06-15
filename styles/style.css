@@ -73,13 +73,13 @@ main {
   box-sizing: border-box;
 }
 
-#testSection {
+/*#testSection {
   display: flex;
   flex-direction: row;
-  gap: 12px; /* Espaço entre os botões */
+  gap: 12px;  Espaço entre os botões 
   justify-content: center;
   align-items: center;
-}
+}*/
 .screen {
   margin-top: 30px;
   width: 100%;
@@ -105,23 +105,53 @@ main {
   font-size: 1.3rem;
 }
 
+.screen .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espaço entre os botões */
+  margin-top: 20px; /* Espaço acima dos botões */
+  flex-wrap: nowrap;
+}
+
+.screen .manivela,
+.screen .ouvir-btn {
+  background: #d8aa00;
+  color: #f8f8f8;
+  padding: 16px 32px;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 160px;
+  width: 250px; /* Define largura fixa para ambos */
+  height: 60px; /* Altura fixa para ambos os botões */
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  align-self: center;
+  margin-top: 24px;
+  border: 2px solid #916b0b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
 .screen .ouvir-btn {
   background: #f8f8f8;
   color: #007bff;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 5%;
-  font-weight: bold;
-  font-size: 1.0rem;
-  transition: background 0.3s ease, border-color 0.3s ease;
-  align-self: center; /* Centraliza verticalmente dentro do flex container */
-  margin-top: 24px;   /* Espaço acima do botão */
+  border: 2px solid #007bff;
 }
 
-.screen .ouvir-btn :hover {
+.screen .ouvir-btn:hover {
   background: #0056b3;
-  color:#f8f8f8;
+  color: #f8f8f8;
+  border-color: #0056b3;
+}
+
+.screen .manivela:hover{
+  background: #a87c0d;
+  color: #f8f8f8;
 }
 
 .ods {
