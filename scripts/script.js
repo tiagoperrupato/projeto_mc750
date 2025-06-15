@@ -96,36 +96,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function updateScreen(buttonId) {
-        // Esconde todas as telas, inclusive a inicial
-        document.querySelectorAll('.screen').forEach(el => {
-            el.classList.add('hidden');
-        });
+    // Esconde todas as telas, inclusive a inicial
+    document.querySelectorAll('.screen').forEach(el => {
+        el.classList.add('hidden');
+    });
 
-        // Extrai número do botão (ex: Button3 -> 3)
-        const buttonNumberMatch = buttonId.match(/\d+/);
-        const buttonNumber = buttonNumberMatch ? buttonNumberMatch[0] : null;
+    const header = document.getElementById('headerSection');
 
-        const header = document.getElementById('headerSection');
+    // Extrai número do botão (ex: Button3 -> 3)
+    const buttonNumberMatch = buttonId.match(/\d+/);
+    const buttonNumber = buttonNumberMatch ? buttonNumberMatch[0] : null;
 
-        if (buttonNumber) {
-            const screenToShow = document.getElementById(`screenButton${buttonNumber}`);
-            if (screenToShow) {
-                screenToShow.classList.remove('hidden');
-            }
-            document.getElementById('testSection').classList.add('hidden');
-            
-            if(header) header.classList.add('hidden');
-            document.getElementById('headerSection').classList.add('hidden');
-        } else {
-            // Mostra a tela inicial e a seção de teste
-            const initial = document.getElementById('initialScreen');
-            if (initial) initial.classList.remove('hidden');
-            document.getElementById('testSection').classList.remove('hidden');
-            
-            if(header) header.classList.remove('hidden');
-            document.getElementById('headerSection').classList.remove('hidden');
+    if (buttonNumber) {
+        // Mostra a tela correspondente ao botão
+        const screenToShow = document.getElementById(`screenButton${buttonNumber}`);
+        if (screenToShow) {
+            screenToShow.classList.remove('hidden');
         }
+        // Esconde o header principal
+        if(header) header.classList.add('hidden');
+    } else {
+        // Mostra a tela inicial
+        const initial = document.getElementById('initialScreen');
+        if (initial) initial.classList.remove('hidden');
+        // Mostra o header principal
+        if(header) header.classList.remove('hidden');
     }
+}
+
 
     // Leitura de texto
     window.lerDescription = function (button) {
