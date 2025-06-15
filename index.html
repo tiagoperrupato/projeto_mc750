@@ -1,47 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arduino Web Interface</title>
-    <link rel="stylesheet" href="styles/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G13 - ODS Developers</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
+
 <body>
-    <header>
-        <section id="headerSection">
-        <h1>Interface Web para Arduino 🚀</h1>
-        <button id="connectButton">🔌 Conectar ao Arduino</button>
-        <p id="status">Status: Desconectado</p>
-        </section>
-    </header>
 
-    <main id="content">
-        <div class="screen" id="initialScreen">
-            <h2>Pressione um botão no Arduino</h2>
-            <p>Conecte-se ao dispositivo e aperte um dos 6 botões para mudar o conteúdo desta tela.</p>
-        
-        <section id="testSection">
-            <h3>Simulação Local (sem Arduino)</h3>
-            <p>Clique para simular um botão do Arduino:</p>
-            <button onclick="simulateButton('Button1')">Botão 1</button>
-            <button onclick="simulateButton('Button2')">Botão 2</button>
-            <button onclick="simulateButton('Button3')">Botão 3</button>
-            <button onclick="simulateButton('Button4')">Botão 4</button>
-            <button onclick="simulateButton('Button5')">Botão 5</button>
-            <button onclick="simulateButton('Button6')">Botão 6</button>
-        </section>
+  <!-- Cabeçalho principal -->
+  <header>
+    <section id="headerSection">
+      <div class="logos-esquerda">
+        <img src="assets/logo-unicamp-name-line-blk-red-0480.png" alt="Logo da Unicamp" class="logo" />
+        <img src="assets/logo-ic-unicamp-slant-line-wht-sky-ora-0480.png" alt="Logo do Instituto de Computação" class="logo" />
+      </div>
+      <h1> Maquete Interativa: O Peso Energético da IA </h1>
+      <h2>Grupo 13 - Ods Developers 🚀</h2>
+      <button id="connectButton">🔌 Conectar ao Arduino</button>
+      <p id="status">Status: Desconectado</p>
+    </section>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main id="content">
+
+    <div class="screen" id="initialScreen">
+      
+      <h2>Sobre o Projeto</h2>
+
+      <!-- Logotipos das ODS -->
+      <div id="institucional" class="institucional-bar">
+        <div class="ods-logos">
+          <img src="assets/ods_9.jpg" alt="ODS 9 - Indústria, inovação e infraestrutura" class="ods" />
+          <img src="assets/ods_12.jpg" alt="ODS 12 - Consumo e produção responsáveis" class="ods" />
         </div>
+      </div>
 
-        <!-- Conteúdos de cada botão -->
-        <div class="screen hidden" id="screenButton1"></div>
-        <div class="screen hidden" id="screenButton2"></div>
-        <div class="screen hidden" id="screenButton3"></div>
-        <div class="screen hidden" id="screenButton4"></div>
-        <div class="screen hidden" id="screenButton5"></div>
-        <div class="screen hidden" id="screenButton6"></div>
-    </main>
+    <div class ="project-description">
+      <p>
+        O projeto de maquete interativa, desenvolvido para a disciplina de MC750, utiliza uma interface Web integrada ao Arduino UNO para promover
+        reflexões sobre o consumo de energia em diferentes contextos: doméstico, industrial, agrícola, hospitalar e computacional - com foco na comparação com o consumo de energia de atividades de IA.
+      </p>
+      <br>
+      <p><strong><span style="font-size:2em;">🎯</span>
+        Pressione um botão físico conectado ao Arduino, acesse conteúdos interativos, com comparações entre o consumo de IA e
+        atividades do cotidiano.</strong></p>
+      <button class="ouvir-btn" onclick="lerDescription(this)">🔈 Ouvir</button>
+    </div>
 
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/scriptScreen.js"></script>
+
+      <!-- Simulação local -->
+      <section id="testSection">
+        <h3>Simulação Local (sem Arduino)</h3>
+        <p>Clique para simular um botão do Arduino:</p>
+        <button onclick="simulateButton('Button1')">Botão 1</button>
+        <button onclick="simulateButton('Button2')">Botão 2</button>
+        <button onclick="simulateButton('Button3')">Botão 3</button>
+        <button onclick="simulateButton('Button4')">Botão 4</button>
+        <button onclick="simulateButton('Button5')">Botão 5</button>
+        <button onclick="simulateButton('Button6')">Botão 6</button>
+      </section>
+    </div>
+
+    <!-- Conteúdo de cada botão -->
+    <div class="screen hidden" id="screenButton1"></div>
+    <div class="screen hidden" id="screenButton2"></div>
+    <div class="screen hidden" id="screenButton3"></div>
+    <div class="screen hidden" id="screenButton4"></div>
+    <div class="screen hidden" id="screenButton5"></div>
+    <div class="screen hidden" id="screenButton6"></div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/scriptScreen.js"></script>
 </body>
 </html>

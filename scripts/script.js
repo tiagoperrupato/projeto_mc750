@@ -127,6 +127,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    // Leitura de texto
+    window.lerDescription = function (button) {
+      // Se já está falando, interrompe e retorna
+      if (speechSynthesis.speaking) {
+        speechSynthesis.cancel();
+        return;
+      }
+      const desc = button.closest('.project-description');
+      if (!desc) return;
+      const text = desc.innerText.replace(/🔈 Ouvir/g, '').trim();
+      const utterance = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
+    };
+
+
     // Permite simulação sem Arduino
     window.simulateButton = function (buttonId) {
         console.log(`Simulando botão: ${buttonId}`);
