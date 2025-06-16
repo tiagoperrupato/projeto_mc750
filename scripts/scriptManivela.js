@@ -38,4 +38,19 @@ function inicializarLogicaManivela() {
         Você deu energia para um hospital por <b>${tempoHospital}s</b>!`;
     }
   };
+
+  // Função para ler o texto do card da manivela
+  window.lerCardManivela = function (button) {
+    if (speechSynthesis.speaking) {
+      speechSynthesis.cancel();
+      return;
+    }
+
+    const card = button.closest('.geracao-energia-container');
+    if (!card) return;
+    const text = card.innerText.replace(/🔈 Ouvir/g, '').trim();
+    const utterance = new SpeechSynthesisUtterance(text);
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
+  };
 }
