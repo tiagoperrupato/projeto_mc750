@@ -1,15 +1,21 @@
-(function() {
-  // Proporção: x = 34 * 10 / 40
-  const x = (34 * 10 / 40).toFixed(2);
+// scripts/scriptManivela.js
 
+function inicializarLogicaManivela() {
   let timer = 0;
   let interval = null;
   let isGirando = false;
 
+  // Busca os elementos do DOM somente quando a função é chamada
   const status = document.getElementById('statusManivela');
   const tempo = document.getElementById('tempoManivela');
 
-  // Recebe 1 (girando) ou 0 (parado)
+  // Se os elementos não existem, não continua
+  if (!status || !tempo) {
+    console.error("Elementos da manivela não encontrados. A lógica não vai funcionar.");
+    return;
+  }
+
+  // A função que recebe os dados do Arduino (0 ou 1)
   window.setGiro = function(valor) {
     if (valor === 1 && !isGirando) {
       // Começa a girar
@@ -32,4 +38,4 @@
         Você deu energia para um hospital por <b>${tempoHospital}s</b>!`;
     }
   };
-})();
+}

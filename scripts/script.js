@@ -1,3 +1,5 @@
+// scripts/script.js
+
 document.addEventListener('DOMContentLoaded', async () => {
     const connectButton = document.getElementById('connectButton');
     const statusDisplay = document.getElementById('status');
@@ -13,7 +15,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if ('serial' in navigator) {
         connectButton.addEventListener('click', () => {
             if (port) {
-                // Se já estiver conectado, desconecta
                 port.close();
                 port = undefined;
                 statusDisplay.textContent = 'Status: Desconectado';
@@ -82,6 +83,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                         if (typeof inicializarNavegacaoCards === 'function') {
                             inicializarNavegacaoCards(`#screenButton${i} .cards-container`);
                         }
+                        
+                        if (i === 7) {
+                            // Inicializa AMBAS as lógicas da tela 7
+                            if (typeof inicializarLogicaManivela === 'function') {
+                                inicializarLogicaManivela();
+                            }
+                            if (typeof inicializarConexaoManivela === 'function') {
+                                inicializarConexaoManivela();
+                            }
+                        }
                     })
                     .catch(err => {
                         screenDiv.innerHTML = `<p style="color:red;">Erro ao carregar conteúdo da tela ${i}.</p>`;
@@ -91,44 +102,33 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
 
-        // Espera todos os fetches terminarem
         return Promise.all(promises);
     }
 
     function updateScreen(buttonId) {
-    // Esconde todas as telas, inclusive a inicial
-    document.querySelectorAll('.screen').forEach(el => {
-        el.classList.add('hidden');
-    });
+        document.querySelectorAll('.screen').forEach(el => {
+            el.classList.add('hidden');
+        });
 
-    const header = document.getElementById('headerSection');
+        const header = document.getElementById('headerSection');
+        const buttonNumberMatch = buttonId.match(/\d+/);
+        const buttonNumber = buttonNumberMatch ? buttonNumberMatch[0] : null;
 
-    // Extrai número do botão (ex: Button3 -> 3)
-    const buttonNumberMatch = buttonId.match(/\d+/);
-    const buttonNumber = buttonNumberMatch ? buttonNumberMatch[0] : null;
-
-    if (buttonNumber) {
-        // Mostra a tela correspondente ao botão
-        const screenToShow = document.getElementById(`screenButton${buttonNumber}`);
-        if (screenToShow) {
-            screenToShow.classList.remove('hidden');
+        if (buttonNumber) {
+            const screenToShow = document.getElementById(`screenButton${buttonNumber}`);
+            if (screenToShow) {
+                screenToShow.classList.remove('hidden');
+            }
+            if(header) header.classList.add('hidden');
+        } else {
+            const initial = document.getElementById('initialScreen');
+            if (initial) initial.classList.remove('hidden');
+            if(header) header.classList.remove('hidden');
         }
-        // Esconde o header principal
-        if(header) header.classList.add('hidden');
-    } else {
-        // Mostra a tela inicial
-        const initial = document.getElementById('initialScreen');
-        if (initial) initial.classList.remove('hidden');
-        // Mostra o header principal
-        if(header) header.classList.remove('hidden');
     }
-}
-window.updateScreen = updateScreen;
+    window.updateScreen = updateScreen;
 
-
-    // Leitura de texto
     window.lerDescription = function (button) {
-      // Se já está falando, interrompe e retorna
       if (speechSynthesis.speaking) {
         speechSynthesis.cancel();
         return;
@@ -140,8 +140,6 @@ window.updateScreen = updateScreen;
       speechSynthesis.speak(utterance);
     };
 
-
-    // Permite simulação sem Arduino
     window.simulateButton = function (buttonId) {
         console.log(`Simulando botão: ${buttonId}`);
         updateScreen(buttonId);
