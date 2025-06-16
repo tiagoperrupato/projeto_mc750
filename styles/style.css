@@ -1,17 +1,16 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-
     color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
 }
 
 header {
   background-color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0px;
+  top: 0px;
+  border-radius: 0px;
   display: flex;
 }
 
@@ -46,8 +45,8 @@ main {
   background: linear-gradient(315deg, #7097f1, #9fb7f0, #f8f8f8);
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;
-  padding: 30px;
-  border-radius: 8px;
+  padding: 0px;
+  border-radius: 1px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   box-sizing: border-box;
 }
@@ -81,17 +80,17 @@ main {
   align-items: center;
 }*/
 .screen {
-  margin-top: 30px;
+  margin-top: 0px;
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
   display: none; /* Esconde por padrão */
 }
-
 .screen .project-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 40px;
   align-items: center;
   text-align: justify;
   width: 100%;
