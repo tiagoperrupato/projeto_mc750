@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setor Hospitalar</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- Ícones Font Awesome CDN (para os ícones nos cards) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+</head>
+<body>
+    <header>
+      <h1>Setor Hospitalar</h1>
+      <a class="home-link" onclick="voltarHome(event)">Home</a>
+    </header>
+    <div class="intro" aria-label="Descrição da página">
+      <p>
+        Em um hospital, a energia mantém vidas. Na IA, ela alimenta previsões. Como queremos usá-la?
+      </p>
+    </div>
+  
+    <section>
+    
+      <div class="cards-container">
+      
+        <!-- CARD 1 -->
+        <div class="card active">
+        <div class="media-icons"><i class="fas fa-home"></i></div>
+        <div class="Activity">
+          <h2>
+          <span style="font-size: 2.5em; line-height: 1;">🏥</span><br>
+          Hospital<br>(Grande porte)
+          </h2>
+        </div>
+        <div class="card-infos">
+          <div class="Consumption"><p><strong>⚡ Consumo:</strong> ~34 GWh por dia</p></div>
+          <div class="Equivalency"><p><strong>📊 Equivalência:</strong> ~133 bilhões de consultas ou 138 milhões de imagens geradas com IA.</p></div>
+          <div class="description">
+          <p>💡 Todo uso diário de IA já rivaliza com o consumo de um grande hospital.</p>
+          </div>
+        </div>
+        <button onclick="lerTexto(this)">🔈 Ouvir</button>
+        </div>
+      
+        <!-- CARD 2 -->
+        <div class="card">
+        <div class="media-icons"><i class="fas fa-home"></i></div>
+        <div class="Activity">
+          <h2>
+          <span style="font-size: 2.5em; line-height: 1;">🧲</span><br>
+          Exame de Ressonância Magnética (MRI) <br>(Um exame)
+          </h2>
+        </div>
+        <div class="card-infos">
+          <div class="Consumption"><p><strong>⚡ Consumo:</strong> ~19.9 kWh</p></div>
+          <div class="Equivalency"><p><strong>📊 Equivalência:</strong>  ~66 mil consultas ou 69 a 2 mil de imagens geradas com IA.</p></div>
+          <div class="description">
+          <p>💡 Um MRI consome mais energia do que milhares de interações com IA. O que deve ser prioridade: gerar imagens sintéticas ou análises médicas? </p>
+          </div>
+        </div>
+        <button onclick="lerTexto(this)">🔈 Ouvir</button>
+        </div>
+      </div>
+          <!-- Botões de navegação -->
+      <div class="navigation-buttons" aria-label="Navegação entre cards">
+        <button id="prevBtn" aria-label="Card anterior">< Anterior</button>
+        <button id="nextBtn" aria-label="Próximo card">Próximo ></button>
+      </div>
+    </section>
+
+</body>
+</html>
+      

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rotinas de IA</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- Ícones Font Awesome CDN (para os ícones nos cards) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+</head>
+<body>
+    <header>
+      <h1>Rotinas de IA</h1>
+      <a class="home-link" onclick="voltarHome(event)">Home</a>
+    </header>
+    <div class="intro" aria-label="Descrição da página">
+      <p>
+        Enquanto sua rotina usa energia para viver, a IA consome para prever. <br> 
+        Compare e repense: quanto vale cada clique?
+      </p>
+    </div>
+  
+    <section>
+    
+      <div class="cards-container">
+      
+        <!-- CARD 1 -->
+        <div class="card active">
+        <div class="media-icons"><i class="fas fa-home"></i></div>
+        <div class="Activity">
+          <h2>
+          <span style="font-size: 2.5em; line-height: 1;">🧠</span><br>
+          Interação com ChatGPT<br>(Uma pergunta)
+          </h2>
+        </div>
+        <div class="card-infos">
+          <div class="Consumption"><p><strong>⚡ Consumo:</strong> ~0.001 a 0.01 kWh</p></div>
+          <div class="Equivalency"><p><strong>📊 Equivalência:</strong> manter uma lâmpada LED de 10W acesa por até 1 hora.</p></div>
+          <div class="description">
+          <p>💡 “Me diga uma receita simples de bolo” pode parecer leve, mas seu impacto é real.</p>
+          </div>
+        </div>
+        <button onclick="lerTexto(this)">🔈 Ouvir</button>
+        </div>
+      
+        <!-- CARD 2 -->
+        <div class="card">
+        <div class="media-icons"><i class="fas fa-home"></i></div>
+        <div class="Activity">
+          <h2>
+          <span style="font-size: 2.5em; line-height: 1;">🔍</span><br>
+          Busca no Google<br>(Uma busca)
+          </h2>
+        </div>
+        <div class="card-infos">
+          <div class="Consumption"><p><strong>⚡ Consumo:</strong> ~0.0003 kWh</p></div>
+          <div class="Equivalency"><p><strong>📊 Equivalência:</strong> manter uma lâmpada LED acesa por 2 minutos.</p></div>
+          <div class="description">
+          <p>💡 Parece pouco? Multiplique isso por bilhões de buscas diárias no mundo inteiro.</p>
+          </div>
+        </div>
+        <button onclick="lerTexto(this)">🔈 Ouvir</button>
+        </div>
+      </div>
+          <!-- Botões de navegação -->
+      <div class="navigation-buttons" aria-label="Navegação entre cards">
+        <button id="prevBtn" aria-label="Card anterior">< Anterior</button>
+        <button id="nextBtn" aria-label="Próximo card">Próximo ></button>
+      </div>
+    </section>
+
+</body>
+</html>
+      

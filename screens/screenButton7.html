@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geração de Energia</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/manivela.css" />
+
+  <!-- Ícones Font Awesome CDN (para os ícones nos cards) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+</head>
+<body>
+    <header>
+      <h1>Geração de Energia</h1>
+      <a class="home-link" onclick="voltarHome(event)">Home</a>
+    </header>
+    <div class="intro" aria-label="Descrição da página">
+    </div>
+  
+    <section>
+      <div class="geracao-energia-container">
+        <div class="geracao-energia-header">
+          <h1 class="motor-title"> É hora de girar! <span class="motor-icon" aria-label="Motor"> ⚙️ </span> </h1>
+          <h2> Conecte o motor e gire a manivela para gerar energia!<br></h2>
+        
+        </div>
+        <div class="geracao-energia-description">
+            <h1><strong>Proporção</strong>: a cada <b>10s</b> girando, você mantém o chatGPT funcionando por <b>1 dia</b>.</h1>
+              <p><strong>⚡Consumo diário do GPT: 40 GWh</strong></p>
+              <p><strong>⚡Consumo diário de um hospital de grande porte: 34 GWh</strong></p>
+        </div>
+
+        <div class="button-container" style="margin-bottom: 20px;">
+            <button id="connectManivelaButton" class="manivela">🔌 Conectar Motor</button>
+            <button id="ouvir-card" onclick="lerCardManivela(this)">🔈 Ouvir</button>
+          </div>
+        <p id="statusManivelaConnect">Status: Desconectado</p>
+        <div id="statusManivela" style="margin-top:1em;font-size:1.1em;"></div>
+        <div id="tempoManivela" style="margin-top:0.5em;font-size:1.1em;"></div>
+      </div>
+    </section>
+
+    <!-- <section>
+      <div class="geracao-energia-container">
+        <h2>Geração de Energia</h2>
+        <p>
+          Gire a manivela para gerar energia!<br>
+          <strong>Proporção:</strong> a cada <b>10s</b> girando, você mantém o GPT funcionando por <b>1 dia</b>.<br>
+          Consumo diário do GPT: <b>40 GWh</b><br>
+          Consumo diário de um hospital: <b>34 GWh</b><br>
+          <span style="font-size:0.95em;">
+            <i>10s girando = 40 GWh (GPT)<br>
+            x s girando = 34 GWh (Hospital)</i>
+          </span>
+          <br>
+          <span id="proporcao-hospital"></span>
+        </p>
+        <div id="statusManivela" style="margin-top:1em;font-size:1.1em;"></div>
+        <div id="tempoManivela" style="margin-top:0.5em;font-size:1.1em;"></div>
+      </div>
+     </section> -->
+        
+ </body>
+ </html>

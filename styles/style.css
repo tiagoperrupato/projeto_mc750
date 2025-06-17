@@ -1,0 +1,228 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+}
+
+header {
+  background-color: #fff;
+  padding: 0px;
+  top: 0px;
+  border-radius: 0px;
+  display: flex;
+}
+
+#connectButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 35px;
+}
+
+#connectButton:hover {
+    background-color: #0056b3;
+}
+
+#status {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;       
+  min-height: 100vh;
+  background: linear-gradient(315deg, #7097f1, #9fb7f0, #f8f8f8);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  padding: 0px;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#content, main {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*#testSection {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;  Espaço entre os botões 
+  justify-content: center;
+  align-items: center;
+}*/
+.screen {
+  margin-top: 0px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: none; /* Esconde por padrão */
+}
+.screen .project-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+  align-items: center;
+  text-align: justify;
+  width: 100%;
+  height: 100%;
+}
+
+.screen .project-description p {
+  max-width: 800px;
+  width: 100%;
+  text-align: justify;
+  font-size: 1.3rem;
+}
+
+.screen .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espaço entre os botões */
+  margin-top: 20px; /* Espaço acima dos botões */
+  flex-wrap: nowrap;
+}
+
+.screen .manivela,
+.screen .ouvir-btn {
+  background: #d8aa00;
+  color: #f8f8f8;
+  padding: 16px 32px;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 160px;
+  width: 250px; /* Define largura fixa para ambos */
+  height: 60px; /* Altura fixa para ambos os botões */
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  align-self: center;
+  margin-top: 24px;
+  border: 2px solid #916b0b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.screen .ouvir-btn {
+  background: #f8f8f8;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.screen .ouvir-btn:hover {
+  background: #0056b3;
+  color: #f8f8f8;
+  border-color: #0056b3;
+}
+
+.screen .manivela:hover{
+  background: #a87c0d;
+  color: #f8f8f8;
+}
+
+.ods {
+  display: flex;
+  align-items: center;
+}
+
+.screen:not(.hidden) {
+  display: block; /* Mostra a tela ativa */
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Barra institucional com logos */
+.institucional-bar {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: transparent;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  top: 30px;
+}
+
+.logos-esquerda {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  padding: 10px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.ods-logos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.ods {
+  height: 200px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .institucional-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logos-esquerda,
+  .ods-logos {
+    justify-content: center;
+  }
+}

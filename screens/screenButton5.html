@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atividades Computacionais</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- Ícones Font Awesome CDN (para os ícones nos cards) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+</head>
+<body>
+    <header>
+      <h1>Atividades Computacionais</h1>
+      <a class="home-link" onclick="voltarHome(event)">Home</a>
+    </header>
+    <div class="intro" aria-label="Descrição da página">
+      <p>
+        Do clique ao cálculo, cada operação consome. Estamos realmente otimizando ou só acelerando o desperdício?
+      </p>
+    </div>
+  
+    <section>
+    
+      <div class="cards-container">
+      
+        <!-- CARD 1 -->
+        <div class="card active">
+        <div class="media-icons"><i class="fas fa-home"></i></div>
+        <div class="Activity">
+          <h2>
+          <span style="font-size: 2.5em; line-height: 1;">🖥️</span><br>
+          Rack de um cluster<br>(Trinta a quarenta nós)
+          </h2>
+        </div>
+        <div class="card-infos">
+          <div class="Consumption"><p><strong>⚡ Consumo:</strong> ~168 kWh por dia</p></div>
+          <div class="Equivalency"><p><strong>📊 Equivalência:</strong> ~560 mil consultas ou 580 a 17 mil imagens geradas com IA.</p></div>
+          <div class="description">
+          <p>💡 Apenas um rack com IA ativada ao máximo consome energia comparável a centenas de milhares de consultas diárias.</p>
+          </div>
+        </div>
+        <button onclick="lerTexto(this)">🔈 Ouvir</button>
+        </div>
+      
+        <!-- CARD 2 -->
+        <div class="card">
+        <div class="media-icons"><i class="fas fa-home"></i></div>
+        <div class="Activity">
+          <h2>
+          <span style="font-size: 2.5em; line-height: 1;">🗄️</span><br>
+          Consultas e Indexação <br>(Cluster médio)
+          </h2>
+        </div>
+        <div class="card-infos">
+          <div class="Consumption"><p><strong>⚡ Consumo:</strong> ~250 kWh por dia</p></div>
+          <div class="Equivalency"><p><strong>📊 Equivalência:</strong> ~833 mil consultas ou 860 a 25 mil imagens geradas com IA.</p></div>
+          <div class="description">
+          <p>💡 Operações em bancos de dados de médio porte consomem energia suficiente para milhares de interações intensas com IA diariamente. Otimização energética nesses processos é vital. </p>
+          </div>
+        </div>
+        <button onclick="lerTexto(this)">🔈 Ouvir</button>
+        </div>
+      </div>
+          <!-- Botões de navegação -->
+      <div class="navigation-buttons" aria-label="Navegação entre cards">
+        <button id="prevBtn" aria-label="Card anterior">< Anterior</button>
+        <button id="nextBtn" aria-label="Próximo card">Próximo ></button>
+      </div>
+    </section>
+
+</body>
+</html>
+      
