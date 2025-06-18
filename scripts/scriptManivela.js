@@ -32,10 +32,10 @@ function inicializarLogicaManivela() {
       isGirando = false;
       clearInterval(interval);
       tempo.textContent = "";
-      const tempoHospital = (timer * 34 / 40).toFixed(2);
+      const tempoHospital = (timer * 34 / 400).toFixed(2);
       status.innerHTML = `Resultado: Parabéns!!<br>
         Você girou por <b>${timer}s</b>.<br>
-        Você deu energia para um hospital por <b>${tempoHospital}s</b>!`;
+        Você deu energia para um hospital por <b>${tempoHospital}dias</b>!`;
     }
   };
 
